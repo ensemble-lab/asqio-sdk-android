@@ -1,0 +1,59 @@
+# Built application files
+*.apk
+*.aar
+*.ap_
+*.aab
+
+# Files for the ART/Dalvik VM
+*.dex
+
+# Java class files
+*.class
+
+# Generated files
+bin/
+gen/
+out/
+release/
+
+# Gradle files
+.gradle/
+build/
+
+# Local configuration file
+local.properties
+
+# Proguard folder
+proguard/
+
+# Log files
+*.log
+
+# Android Studio Navigation editor temp files
+.navigation/
+
+# Android Studio captures folder
+captures/
+
+# IntelliJ
+*.iml
+.idea/
+*.iws
+*.ipr
+
+# Keystore files
+*.jks
+*.keystore
+
+# External native build
+.cxx/
+
+# Kotlin
+.kotlin/
+
+# macOS
+.DS_Store
+
+# Misc
+*.swp
+node_modules/
