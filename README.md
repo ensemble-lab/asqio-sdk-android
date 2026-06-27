@@ -1,5 +1,6 @@
 # asqio SDK for Android
 
+[![CI](https://github.com/ensemble-lab/asqio-sdk-android/actions/workflows/ci.yml/badge.svg)](https://github.com/ensemble-lab/asqio-sdk-android/actions/workflows/ci.yml)
 [![JitPack](https://jitpack.io/v/ensemble-lab/asqio-sdk-android.svg)](https://jitpack.io/#ensemble-lab/asqio-sdk-android)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![minSdk](https://img.shields.io/badge/minSdk-24-brightgreen)](https://developer.android.com/about/versions/nougat)
