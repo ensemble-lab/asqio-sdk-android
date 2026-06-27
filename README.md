@@ -38,7 +38,7 @@ dependencyResolutionManagement {
 ```kotlin
 // app/build.gradle.kts
 dependencies {
-    implementation("com.github.ensemble-lab.asqio-sdk-android:asqio-sdk:0.1.0")
+    implementation("com.github.ensemble-lab:asqio-sdk-android:v0.1.0")
 }
 ```
 
