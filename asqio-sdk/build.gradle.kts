@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
+    `maven-publish`
 }
 
 android {
@@ -54,6 +55,34 @@ android {
 
     testOptions {
         unitTests.isIncludeAndroidResources = true
+    }
+}
+
+// JitPack 上では groupId / version は JitPack 側が自動で上書きするため明示しない。
+// ローカル ./gradlew publishToMavenLocal で動作確認するときは、 group/version を
+// command line で渡すか、 ~/.m2 上で coords を直接確認する。
+afterEvaluate {
+    publishing {
+        publications {
+            register<MavenPublication>("release") {
+                from(components["release"])
+                pom {
+                    name.set("asqio Android SDK")
+                    description.set(
+                        "Android SDK for the asqio customer support / inquiry system."
+                    )
+                    url.set("https://github.com/ensemble-lab/asqio-sdk-android")
+                    licenses {
+                        license {
+                            name.set("MIT License")
+                            url.set(
+                                "https://github.com/ensemble-lab/asqio-sdk-android/blob/main/LICENSE"
+                            )
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

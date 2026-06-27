@@ -1,5 +1,7 @@
 # asqio SDK for Android
 
+[![JitPack](https://jitpack.io/v/ensemble-lab/asqio-sdk-android.svg)](https://jitpack.io/#ensemble-lab/asqio-sdk-android)
+
 カスタマーサポートサービス asqio の Android 向け SDK です。アプリ内でユーザーが
 問い合わせ（チケット）を作成し、運営者とメッセージをやり取りできる機能を提供します。
 
@@ -20,16 +22,28 @@
 
 ## インストール
 
-将来的に Maven Central / GitHub Packages 等への公開を予定しています。当面は本リポジトリを
-ローカルに clone し、settings.gradle に includeBuild するか、`./gradlew :asqio-sdk:assembleRelease`
-で AAR を生成して取り込んでください。
+JitPack 経由で配信しています。
+
+```kotlin
+// settings.gradle.kts
+dependencyResolutionManagement {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url = uri("https://jitpack.io") }
+    }
+}
+```
 
 ```kotlin
 // app/build.gradle.kts
 dependencies {
-    implementation(project(":asqio-sdk"))
+    implementation("com.github.ensemble-lab.asqio-sdk-android:asqio-sdk:0.1.0")
 }
 ```
+
+最新版およびリリース履歴は [JitPack のプロジェクトページ](https://jitpack.io/#ensemble-lab/asqio-sdk-android)
+を参照してください。
 
 ## 使い方
 
